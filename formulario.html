@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <body>
+        <section>
+            <div class="poligon1"></div>
+            <div class="poligon2"></div>
+            <div class="poligon3"></div>
+         
+            <header>
+                <a href="index.html" class="logo"> Daina Díaz</a>
+                <ul class="navbar">
+                    <li id="Q">
+                        <a href="quiensoy.html">Quién Soy</a>
+                    </li>
+                    <li id="CV">
+                        <a href="CV.html">CV</a>
+                    </li>
+                    <li id="P">
+                        <a href="proyectos.html" >Proyectos</a>
+                    </li>
+                    <li id="C">
+                        <a href="formulario.html" >Contacto</a>
+                    </li>
+                </ul>
+            </header>
+            <div class="formulario">
+                <form action="mailto:daina111@gmail.com" method="post" name="contacto"> 
+                    
+                    <fieldset class="field1">
+                        <legend>Datos Personales</legend>
+                        <div class="caja1">
+                                <div class="estruct">
+                                    Nombre: <input type="text" name="contacto" id="name" required>
+                                </div> 
+                                <div class="estruct">
+                                    Primer apellido: <input type="text" name="contacto" id="apell" required>
+                                </div>
+                                <div class="estruct">
+                                    Fecha de nacimiento: <input type="date" name="nacimiento" id="naci" max="2006-12-31">
+                                </div>
+                                <div class="estruct">
+                                    Sexo: <div id="sexo">
+                                            <input type="radio" name="sexo" id="Mujer">Mujer
+                                            <input type="radio" name="sexo" id="Hombre">Hombre
+                                            <input type="radio" name="sexo" id="Otros">Otros
+                                        </div>
+                                </div>
+                        </div>
+
+                        <div class="caja2">
+                                <div class="estruct">
+                                    Email: <input type="email" name="contacto" id="email" required>
+                                </div>
+                                <div class="estruct">
+                                    Teléfono: <input type="tel" name="contacto" id="telef" required>
+                                </div>
+                                <div class="estruct">
+                                    Provincia: <input type="text" name="contacto" id="provin">
+                                </div>
+                                <div class="estruct">
+                                    Población: <input type="text" name="contacto" id="pobla">
+                                </div>
+                        </div>
+        
+                    </fieldset>
+
+                    <fieldset class="field2">
+                        <legend>Cúentanos más</legend>
+                        <div class="estruct2">
+                            Cual es tu proyecto?: 
+                            <textarea name="contacto" id="detalles" cols="" rows="" maxlength="200"></textarea>
+                        </div>
+                        <div class="estruct2">
+                        Como nos has encontrado?: 
+                        <br>
+                            <input type="checkbox" name="redes" id="redes"> Redes Sociales
+                            <input type="checkbox" name="conocidos" id="conocidos"> Conocidos
+                            <input type="checkbox" name="foro" id="foro"> Recomendación foro
+                            <input type="checkbox" name="red" id="red">Búsqueda propia
+                            <input type="checkbox" name="otros" id="otros"> Otros
+                        </div>
+                    </fieldset>
+        
+                    <div class="boton">
+                        <input type="submit" value="Enviar"> <!--Poner imagen con trasnción para enviar y eliminar??-->
+                        <input type="reset" value="Eliminar">
+                    </div>
+                </form>
+        
+            </div>
+    
+            <footer>
+                <p>&Copy;Web Personal creada para la materia de Lenguaje de Marcas del CFGS ASIR/ DAM / DAW</p>
+            </footer>
+        </section>
+</body>
+</html>

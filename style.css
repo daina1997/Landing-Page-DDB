@@ -1,0 +1,1423 @@
+@font-face {
+    font-family: "Quick";
+    src: url(Fonts/Quicksand-Regular.ttf);
+}
+@font-face {
+    font-family: "Caveat";
+    src: url(Fonts/Caveat-Regular.ttf);
+}
+/*Intenté vincular las tipografias directamente con google font pero los códigos que
+ facilitaban no eran los mismos que en el video de youtube. Así que me las descargué y las puse en una carpeta*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quick";
+}
+body{
+    background-color: rgba(251, 251, 251, 0.938);
+  
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex; /*Es una propiedad de flebox y permite que los elementos de este contenedor sean mucho más flexibles y manejables.
+    las propiedades justify-content y align-items se utilizan junto con display flex y son cruciales para controlar la alineación y 
+    distribución del espacio entre y alrededor de los elementos hijos del contenedor flex.*/
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/*Cabecera*/
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(35, 36, 37);
+    font-size: 2.2em;
+    font-weight: 550;
+    background-color: rgba(255, 255, 255, 0.388);
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 0px 50px;
+    margin-top: 4vh;
+    margin-left: 4vh;
+    padding: 2.5vh;
+    text-align: center;
+}
+header .logo:hover{
+    color: rgb(247, 243, 249);
+    background-color:rgba(74, 74, 74, 0.605);
+    transition: 0.8s;
+}
+
+header .navbar{
+    display:flex;
+    align-items: center;
+}
+header .navbar li{
+    list-style: none;
+    margin-left: 1.5vh;
+    margin-right: 1.5vh;
+    text-align: center;
+}
+header .navbar li a{
+    font-size: 1.3em;
+    color: rgb(35, 36, 37);
+    font-weight: 520;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5vh;
+
+}
+header .navbar #Q a:hover{
+    border-bottom: 4px dotted rgb(119, 204, 58);
+    transition: 0.2s; 
+}
+header .navbar #CV a:hover{
+    border-bottom: 5px dotted rgb(243, 174, 54);
+    transition: 0.2s; 
+}
+header .navbar #P a:hover{
+    border-bottom: 5px dotted rgb(171, 82, 187);
+    transition: 0.2s; 
+}
+header .navbar #C a:hover{
+    border-bottom: 5px dotted rgb(70, 235, 224);
+    transition: 0.2s; 
+}
+
+/*Contenido de la web*/
+
+.contenido{
+    position: relative;
+    top:5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.contenido .titulobox{
+    position: absolute;
+    left: 28%;
+    text-align: center;
+    z-index: 1;
+}
+.contenido .titulobox h2{
+    font-size: 3.3em;
+    font-weight: 550;
+    text-transform: uppercase;
+    color: whitesmoke;
+    margin-top: 1vh;
+    
+}
+.contenido .titulobox h2 span{
+    border: 5px solid  rgb(35, 36, 37);
+    background-color:  rgba(75, 75, 75, 0.922);
+    padding: 1.2vh;
+    border-radius: 20px;
+}
+.contenido .titulobox h3{
+    font-family: "Caveat";
+    color:black ;
+    font-size: 2.5em;
+    font-weight: 400;
+} 
+.contenido .titulobox p{
+    font-size: 1.5em;
+    font-weight: 450;
+    line-height: 1.5;
+    margin-bottom: 3vh;
+
+}
+.contenido .titulobox a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+    background-color: rgba(137, 43, 226, 0.555);
+    border: 2px dotted rgb(74, 74, 74);
+    border-radius: 20px;
+    padding: 1.1vh;
+}
+.contenido .titulobox a:hover{
+    background-color: rgba(74, 197, 183, 0.824);
+    color: white;
+    transition: 0.5s; 
+}
+
+.contenido .img1 {
+    position: absolute;
+    left: 3%;
+    top:2%;
+    display: flex;
+    justify-content: flex-start;
+    width: 50vh;
+}
+.contenido .img1 img{
+    width: 50vh;
+    height: auto;
+}
+.contenido .img1 img:hover{
+    z-index: -90;
+    transform: rotate(-5deg);
+}
+
+.redessociales{
+    position: absolute;
+    top: 30vh;
+    right: 2vh;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+  
+}
+.redessociales li{
+    list-style-type: none;
+    padding: 1.5vh;
+}
+.redessociales li a{
+    color: whitesmoke;
+    font-size: 2em;
+}
+.redessociales li a:hover{
+    color: rgb(53, 191, 198);
+    transition: 0.2s;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    font-size: 0.5em;
+    color:black;
+    text-align: center;
+}
+
+
+/*Elementos extras*/
+
+/*Explicación clip-path: polygon: Vi el clip-path circle en el video de youtube que nos adjuntaste y busqué si había
+otro formato y encontre el polygon. Este permite recortar partes de un elemento para crear formas personalizadas.
+ Los puntos (x, y) representan coordenadas que definen los vértices del polígono.    */
+.poligon1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    background-image: url(img/9137868.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 30% 100%);
+    z-index: -100;
+}
+.poligon2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(109, 225, 221, 0.977);
+    clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 20% 100%);
+    z-index: -102;
+}
+
+.poligon3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55%;
+    height: 100vh;
+    background-color: rgba(129, 111, 219, 0.799);
+    clip-path: polygon(0% 0%, 40% 0%, 70% 100%, 0% 100%);
+    z-index: -103;
+}
+
+/*Página Quién soy:*/
+.contenido2{
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 72vh;
+    margin: 2vh;
+
+}
+.contenido2 h2{
+    position: absolute;
+    top: 8%;
+    left: 40%;
+    border-bottom: 4px solid black;
+    font-family: "Caveat";
+    text-transform: uppercase;
+    font-size: 2.5em;
+}
+.contenido2 .descripcion1{
+    position: absolute;
+    left: 0;
+    top: 23%;
+    display: block;
+    justify-content: flex-start;
+    width: 40%;
+    text-align: justify;
+    font-size: 1.3em;
+    padding: 4vh 2vh;
+
+}
+.contenido2 .descripcion1 .nombre, .edad, .estudios, .trabajo, .hobbies{
+    display: flex;
+    width: 100%;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    font-weight: 600;
+}
+.btn{
+    position: absolute;
+    text-align: center;
+    border: 3.5px dotted black;
+    border-radius: 15px;
+    text-decoration: none; 
+    color: black;
+}
+
+.nom{
+    right: 30%;
+    padding: 1.5vh 3vh;
+    background-color: rgb(190, 131, 246);  
+} 
+.nom:hover, .estud:hover, .hobbi:hover{
+    background-color: rgb(247, 237, 142);
+}
+.edadb:hover, .trabaj:hover{
+    background-color: rgba(42, 164, 164, 0.756);
+}
+
+.edadb{
+    right: 28%;
+    padding: 1.5vh 3vh;
+    background-color: rgba(75, 75, 75, 0.922);
+    color: whitesmoke;
+}
+.estud{
+    right: 15%;
+    padding: 1.5vh 3vh;
+    background-color: rgb(190, 131, 246);
+}
+.trabaj{
+    right: 21%;
+    padding: 1.5vh 3vh;
+    background-color: rgba(75, 75, 75, 0.922);
+    color: whitesmoke;
+}
+.hobbi{
+    position: relative;
+    right: 0;
+    padding: 1.5vh 3vh;
+    background-color: rgb(190, 131, 246);
+}
+
+.contenido2 .descripcion2{
+    position: absolute;
+    right: 0;
+    top: 33%;
+    justify-content: flex-end;
+    width: 40%;
+    text-align: justify;
+    font-size: 1.2em;
+    background-color: rgba(245, 245, 245, 0.553);
+    border-radius: 20px;
+    padding: 2vh 4vh;
+}
+.contenido2 .descripcion2 h3{
+    text-align: center;
+    text-transform: uppercase;
+}
+.contenido2 .descripcion2 .ciclo{
+    text-align: center;
+    margin-top: 2vh;
+    background-color: rgba(75, 75, 75, 0.922);
+    border: 5px solid  rgb(35, 36, 37);
+    border-radius: 20px;
+    font-size: 1.2em;
+    color: whitesmoke;
+}
+.contenido2 .descripcion2 .ciclo:hover{
+    text-shadow: 0 0 10px rgba(245, 245, 245, 0.71);
+}
+.contenido2 .img2{
+    position: absolute;
+    left: 43%;
+    bottom: 13%;
+    display: flex;
+    justify-content: flex-start;
+    width: 30vh;
+}
+.contenido2 .img2 img{
+    width: 30vh;
+    height: auto;
+
+}
+
+
+/*CV*/
+.contenido3{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    top: 10%;
+    background-color: rgb(90, 159, 171);
+    width: 90%;
+    height: 75vh;
+}
+.contenido3:hover{
+    box-shadow: 0 0 20px whitesmoke;
+}
+.columna1{
+    width: 33.3%;
+    height: 75vh;
+    display: block;
+    border-right: 3px solid black;
+}
+.columna1 .imgcv{
+    position: relative;
+    left: 30%;
+    top: 2%;
+    width: 65%;
+    padding-bottom: 2vh;
+    
+}
+.columna1 .imgcv img{
+    width: 65%;
+    height: auto;
+    border: 3px solid black;
+    border-radius: 40%;
+    
+}
+.columna1 .miperfil{
+    position: relative;
+    text-align: justify;
+    background-color: rgb(202, 202, 202);
+    padding: 0.5vh 1.5vh;
+    font-size: 0.9em;
+    color: black;
+}
+.columna1 p{
+    font-size: 1.2em;
+    text-align: center;
+    background-color:  rgb(45, 45, 45);
+    color: whitesmoke;
+    padding: 0.5vh 0vh 0.5vh 0vh;
+}
+
+.columna1 .contacto{
+    position: relative;
+    padding: 1.5vh 0;
+    text-align: center;
+    margin-top: 0;
+    background-color: rgb(90, 159, 171);
+}
+
+.columna1 .contacto li{
+    list-style-type: none;
+    text-align: start;
+    padding: 0.5vh 2vh 0vh 15vh;
+    color: whitesmoke;
+    font-size: 0.8em;
+}
+.columna1 .contacto li a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.columna2{
+    width: 34%;
+    height: 75vh;
+    display: block;
+    border-right: 3px solid black;
+    background-color: rgb(236, 236, 236);
+
+}
+.columna2 p{
+    background-color:  rgb(45, 45, 45);
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 0.5vh 0vh 0.5vh 0vh;
+    
+}
+.columna2 #margin{
+    margin-bottom: 3vh;
+}
+.columna2 .skills{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 2vh 0vh 1vh 0vh;
+    font-size: 0.9em;
+    
+}
+.columna2 .skills li{
+    list-style-type: none;
+}
+
+.columna2 .skills .soft{
+    padding: 1vh 2vh;
+    border-right: 3px solid black;
+}
+.columna2 .skills .hard{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 2vh;
+}
+.columna2 .skills #uno{
+    position: relative;
+    left: -45%;
+}
+.columna2 .skills #dos{
+    position: relative;
+    right: -5%;
+}
+.columna2 .formacion{
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+
+}
+.columna2 .formacion .fp{
+    padding: 2vh; 
+    border: 4px dotted black;
+    background-color: rgb(90, 159, 171);
+    color: whitesmoke;
+    
+}
+.columna2 .formacion .postgrado, .carrera{
+    padding: 3vh 2vh 1vh 2vh;
+}
+
+.columna3{
+    width: 33.3%;
+    height: 75vh;
+    display: block;
+    background-color: rgb(202, 202, 202);
+    
+}
+.columna3 p{
+    background-color:  rgb(45, 45, 45);
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 0.5vh 0vh 0.5vh 0vh;
+    margin-bottom: 1vh;
+}
+.columna3 #enf{
+    font-size: 0.9em;
+}
+
+.columna3 span{
+    font-weight: 600;
+    font-size: 1em;
+}
+.columna3 .igual{
+    padding: 2vh;
+}
+.columna3 .valle{
+    padding: 2vh 2vh 4vh 2vh;
+}
+.columna3 ul{
+    padding-top: 1vh;
+    padding-left: 6vh;
+    list-style-type: square;
+    font-size: 0.9em;
+}
+.columna3 .idiomas{
+    padding-left: 14vh;
+    font-size: 0.9em;
+
+}
+.columna3 .idiomas ul{
+    list-style-type: none;
+}
+
+
+/*Proyectos*/
+#proyectos h2{
+    position: absolute;
+    top: 15%;
+    left: 43%;
+    border-bottom: 4px solid black;
+    font-family: "Caveat";
+    text-transform: uppercase;
+    font-size: 2.3em;
+}
+.contenido4{
+    width: 100%;
+    height: 80vh;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+
+}
+.container:after{
+    content:""; 
+    display: block;
+    height: 0px;
+    clear: both; 
+}
+.container{
+    width: 68%;
+    height: 70vh;
+    position: absolute;
+    bottom: 5%;
+    left: 18%;
+}
+
+.container div{
+    width: 30%;
+    height: 35vh;
+    display: inline; 
+    float: left; 
+    margin: 0% 3% 0% 0%;
+    padding: 0px;
+}
+.container div a{
+    text-decoration: none;
+}
+.container div img{
+    width: 80%;
+    height: 32vh;
+    box-shadow: 0 0 10px #666;
+    border: 5px solid #fff;
+}
+
+.container div img~span{
+   
+    width: 80%;
+    display: block;
+    opacity: 0;
+    margin: 0;
+    padding: 0.5vh 2vh;
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+    box-shadow: 0 0 10px #666;
+    text-align: center;
+}
+
+.container div img:hover+span{
+    opacity: 1;
+}
+
+.container:hover div{
+    opacity: 0.2;
+    transform: scale(0.7);
+    transition: 2s;
+}
+
+.container:hover div:hover{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/*Formulario*/
+.formulario{
+    position: relative;
+    top: 10%;
+    background-color: rgba(36, 35, 35, 0.466);
+    color: whitesmoke;
+    font-size: 1em;
+}
+
+.field1{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 2vh;
+    padding: 2vh;
+}
+.estruct{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5vh;
+}
+#sexo input{
+    margin: 0.8vh;
+}
+
+legend{
+    font-family: "Caveat";
+    font-size: 1.5em;
+    text-align: center;
+}
+
+textarea{
+    width: 100%;
+    height: 15vh;
+}
+
+.field2{
+    margin: 2vh;
+    padding: 2vh;
+    
+}
+.estruct2 input{
+    margin: 0.8vh;
+}
+.boton{
+    text-align: center;
+}
+.boton [type="submit"],
+.boton [type="reset"]{
+    width: 10%;
+    height: 5vh;
+    margin-right: 15px;
+    font-family: "Caveat";
+    font-size: 1.1em;
+}
+.boton [type="submit"]:hover{
+    background-color: rgba(243, 213, 82, 0.858);
+}
+.boton [type="reset"]:hover{
+    background-color: rgba(45, 215, 218, 0.833);
+}
+
+
+
+
+
+
+
+
+/*Responsive:*/
+
+@media screen and (max-width:576px){
+    /*Cabecera*/
+    header .logo{
+        font-size: 1.3em;
+        margin-top: 4vh;
+        margin-left: 4vh;
+        padding: 2.5vh;  
+    }
+    header .navbar li a{
+        font-size: 0.9em;
+        padding: 1.5vh;
+    
+    }
+
+    /*Index*/
+    .contenido{
+        top:2vh;
+    }
+    .contenido .titulobox{
+        left: 18%;
+        
+    }
+    .contenido .titulobox h2{
+        font-size: 2.3em;
+    }
+    .contenido .titulobox h2 span{
+        border: 3px solid  rgb(35, 36, 37);
+    }
+    .contenido .titulobox h3{
+        
+        font-size: 1.8em;
+    } 
+    .contenido .titulobox p{
+        font-size: 1em;
+        line-height: 1;
+        margin-bottom: 3vh;
+    
+    }
+    .contenido .titulobox a{
+        font-size: 0.8em;
+        border: 2px dotted rgb(74, 74, 74);
+        padding: 1.1vh;
+    }
+    .contenido .img1 {
+        left: 3%;
+        top:15vh;
+        width: 50vh;
+    }
+    .contenido .img1 img{
+        width: 38vh;
+        height: auto;
+    }
+    .redessociales{
+        top: 33vh;
+        right: 2vh;
+        
+    }
+    .redessociales li a{
+        font-size: 1.5em;
+    }
+
+    /*Quién soy*/
+
+    .contenido2{
+        bottom: -7%;
+        width: 100%;
+        height: 65vh;
+        margin: 2vh;
+    
+    }
+    .contenido2 h2{
+        top: -3%;
+        left: 35%;
+        border-bottom: 2px solid black;
+        font-size: 1.7em;
+    }
+    .contenido2 .descripcion1{
+        left: 0;
+        top: 28%;
+        width: 60%;
+        font-size: 0.8em;
+        padding: 1vh 1vh;
+    }
+    .btn{
+        border: 2.5px dotted black;
+    }
+    .nom{
+        right: 38%;
+        padding: 1.5vh 3vh;
+        
+    }     
+    .edadb{
+        right: 36%;
+        padding: 1.5vh 3vh;
+    }
+    .estud{
+        right: 23%;
+        padding: 1.5vh 3vh;
+    }
+    .trabaj{
+        right: 28%;
+        padding: 1.5vh 3vh;
+    }
+    
+    .contenido2 .descripcion2{
+        right: 0;
+        top: 18%;
+        width: 45%;
+        font-size: 0.8em;
+        border-radius: 20px;
+        padding: 1vh 3vh;
+    }
+   
+    .contenido2 .descripcion2 .ciclo{
+        margin-top: 2vh;
+        border: 5px solid  rgb(35, 36, 37);
+        font-size: 1em;
+       
+    }
+    .contenido2 .img2{
+        left: 70%;
+        bottom: -14%;
+        width: 25vh;
+        z-index: -1;
+    }
+    .contenido2 .img2 img{
+        width: 25vh;
+        height: auto;
+    
+    }
+
+    /*CV*/
+    .columna1 .imgcv img{
+        width: 75%;
+    }
+    .columna1 .miperfil{
+        font-size: 0.6em;
+    }
+    .columna1 .contacto li{
+        padding: 0.5vh 1vh 0vh 5vh;
+        font-size: 0.6em;
+    }
+    
+    .columna1 p{
+        font-size: 0.8em;
+    }
+    .columna2 .skills{
+        font-size: 0.6em;
+    }
+    .columna2 p{
+        font-size: 0.8em;
+    }
+    .columna2 .skills .soft{
+        padding: 1vh 1vh;
+        border-right: 1.5px solid black;
+    }
+    .columna2 .skills #uno{
+        position: relative;
+        left: -15%;
+    }
+    .columna2 .formacion{
+        font-size: 0.7em;
+    }
+    .columna3 #enf{
+        padding-left: 1vh;
+        font-size: 0.6em;
+    }
+    .columna3 p{
+        font-size: 0.8em;
+    }
+    .columna3 span{
+        font-size: 0.7em;
+    }
+    .columna3 ul{
+        font-size: 0.6em;
+    }
+    .columna3 .igual{
+        padding: 2vh;
+    }
+    .columna3 .valle{
+        padding: 0vh 2vh 2vh 2vh;
+    }
+    .columna3 ul{
+        padding-top: 1vh;
+        padding-left: 3vh;
+        list-style-type: square;
+    }
+    .columna3 .idiomas{
+        padding-left: 3vh;
+        padding-top: 1.5vh;
+    
+    }
+    /*Proyectos*/
+    #proyectos h2{
+        border-bottom: 2px solid black;
+        font-size: 1.5em;
+        top: 19%;
+    }
+    
+    .container{
+        bottom: -2vh;
+    }
+    
+    .container div{
+        width: 30%;
+        height: 30vh;
+    }
+    
+    .container div img{
+        width: 88%;
+        height: 25vh;
+    }
+    
+    .container div img~span{
+        width: 80%;
+    }
+
+    /*Contacto*/
+    .formulario{
+        top: 10%;
+        font-size: 0.7em;
+    }
+
+    legend{
+        font-size: 1.3em;
+    }
+    .boton [type="submit"],
+    .boton [type="reset"]{
+        width: 10%;
+        height: 5vh;
+        margin-right: 15px;
+        font-size: 1em;
+}  
+}
+
+
+@media screen and (min-width:577px) and (max-width:747px){
+
+    /*Cabecera*/
+    header .logo{
+        font-size: 1.5em;
+        margin-top: 4vh;
+        margin-left: 4vh;
+        padding: 2.5vh;  
+    }
+    header .navbar li a{
+        font-size: 1.1em;
+        padding: 1.5vh;
+    
+    }
+
+     /*Index*/
+     .contenido{
+        position: relative;
+        top:0vh;
+    }
+    .contenido .titulobox{
+        left: 17%;
+    }
+
+    .contenido .titulobox h2 span{
+        border: 3px solid  rgb(35, 36, 37);
+    }
+    .contenido .titulobox h2{
+        font-size: 2.3em;
+        
+    }
+    .contenido .titulobox h3{
+        
+        font-size: 2em;
+    } 
+    .contenido .titulobox p{
+        font-size: 1.2em;
+        line-height: 1;
+        margin-bottom: 3vh;
+    
+    }
+    .contenido .titulobox a{
+        font-size: 1.2em;
+        padding: 1.1vh;
+    }
+    .contenido .img1 {
+        left: 3%;
+        top:15vh;
+        width: 50vh;
+    }
+    .contenido .img1 img{
+        width: 43vh;
+        height: auto;
+    }
+    .redessociales{
+        top: 33vh;
+        right: 2vh;
+        
+    }
+    .redessociales li a{
+        font-size: 1.5em;
+    }
+
+
+    /*Quién soy*/
+
+    .contenido2{
+      
+        bottom: -7%;
+        width: 100%;
+        height: 65vh;
+        margin: 2vh;
+    
+    }
+    .contenido2 h2{
+        top: -3%;
+        left: 35%;
+        font-size: 1.7em;
+        border-bottom: 2px solid black;
+    }
+    .contenido2 .descripcion1{
+        left: 0;
+        top: 28%;
+        width: 60%;
+        font-size: 0.8em;
+        padding: 1vh 1vh;
+    }
+    .btn{
+        border: 2.5px dotted black;
+    }
+    .nom{
+        right: 34.5%;
+        padding: 1.5vh 3vh;  
+    }     
+    .edadb{
+        right: 33%;
+        padding: 1.5vh 3vh;
+    }
+    .estud{
+        right: 23%;
+        padding: 1.5vh 3vh;
+    }
+    .trabaj{
+        right: 28%;
+        padding: 1.5vh 3vh;
+    }
+    
+    .contenido2 .descripcion2{
+        right: 0;
+        top: 18%;
+        width: 45%;
+        font-size: 0.8em;
+        padding: 1vh 3vh;
+    }
+   
+    .contenido2 .descripcion2 .ciclo{
+        margin-top: 2vh;
+        border: 5px solid  rgb(35, 36, 37);
+        font-size: 1em;
+       
+    }
+    .contenido2 .img2{
+        left: 70%;
+        bottom: -14%;
+        width: 25vh;
+        z-index: -1;
+    }
+    .contenido2 .img2 img{
+        width: 25vh;
+        height: auto;
+    
+    }
+    /*CV*/
+    .columna1 .imgcv img{
+        width: 75%;
+    }
+    .columna1 .miperfil{
+        font-size: 0.7em;
+    }
+    .columna1 .contacto li{
+        padding: 0.5vh 1vh 0vh 5vh;
+        font-size: 0.7em;
+    }
+    
+    .columna1 p{
+        font-size: 0.9em;
+    }
+    .columna2 .skills{
+        font-size: 0.6em;
+    }
+    .columna2 p{
+        font-size: 0.9em;
+    }
+    .columna2 .skills .soft{
+        padding: 1vh 1vh;
+        border-right: 1.5px solid black;
+    }
+    .columna2 .skills #uno{
+        position: relative;
+        left: -15%;
+    }
+    .columna2 .formacion{
+        font-size: 0.7em;
+    }
+    .columna3 #enf{
+        padding-left: 1vh;
+        font-size: 0.7em;
+    }
+    .columna3 p{
+        font-size: 0.9em;
+    }
+    .columna3 span{
+        font-size: 0.7em;
+    }
+    .columna3 ul{
+        font-size: 0.7em;
+    }
+    .columna3 .igual{
+        padding: 2vh;
+    }
+    .columna3 .valle{
+        padding: 0vh 2vh 2vh 2vh;
+    }
+    .columna3 ul{
+        padding-top: 1vh;
+        padding-left: 3vh;
+        list-style-type: square;
+    }
+    .columna3 .idiomas{
+        padding-left: 3vh;
+        padding-top: 1.1vh;
+    
+    }
+     /*Proyectos*/
+
+     #proyectos h2{
+        border-bottom: 2px solid black;
+        font-size: 1.8em;
+        top: 20%;
+    }
+    
+    .container{
+        bottom: -2vh;
+    }
+    
+    .container div{
+        width: 30%;
+        height: 33vh;
+    }
+    
+    .container div img{
+        width: 88%;
+        height: 25vh;
+    }
+    
+    .container div img~span{
+        width: 80%;
+    }
+
+    /*Contacto*/
+    .formulario{
+        top: 10%;
+        font-size: 0.7em;
+    }
+
+    legend{
+        font-size: 1.4em;
+    }
+    .boton [type="submit"],
+    .boton [type="reset"]{
+        width: 10%;
+        height: 5vh;
+        margin-right: 15px;
+        font-size: 1em;
+}  
+    
+}
+
+@media screen and (min-width:747px) and (max-width:992px){
+
+    /*Cabecera*/
+    header .logo{
+        font-size: 1.9em;
+        margin-top: 4vh;
+        margin-left: 4vh;
+        padding: 2.5vh;  
+    }
+    header .navbar li a{
+        font-size: 1.2em;
+        padding: 1.5vh;
+    
+    }
+
+     /*Index*/
+     .contenido{
+        position: relative;
+        top:0vh;
+    }
+    .contenido .titulobox{
+        left: 19%;
+    }
+
+    .contenido .titulobox h2 span{
+        border: 3px solid  rgb(35, 36, 37);
+    }
+    .contenido .titulobox h2{
+        font-size: 2.6em;
+        
+    }
+    .contenido .titulobox h3{
+        
+        font-size: 2.2em;
+    } 
+    .contenido .titulobox p{
+        font-size: 1.5em;
+        line-height: 1;
+        margin-bottom: 3vh;
+    
+    }
+    .contenido .titulobox a{
+        font-size: 1.4em;
+        padding: 1.1vh;
+    }
+    .contenido .img1 {
+        left: 3%;
+        top:13vh;
+        width: 50vh;
+    }
+    .contenido .img1 img{
+        width: 47vh;
+        height: auto;
+    }
+    .redessociales{
+        top: 33vh;
+        right: 2vh;
+        
+    }
+    .redessociales li a{
+        font-size: 1.5em;
+    }
+
+
+    /*Quién soy*/
+
+    .contenido2{
+      
+        bottom: -7%;
+        width: 100%;
+        height: 65vh;
+        margin: 2vh;
+    
+    }
+    .contenido2 h2{
+        top: -3%;
+        left: 37%;
+        font-size: 1.8em;
+        border-bottom: 2px solid black;
+    }
+    
+    .contenido2 .descripcion1{
+        left: 0;
+        top: 28%;
+        width: 60%;
+        font-size: 1.1em;
+        padding: 1vh 1vh;
+    }
+    .btn{
+        border: 2.5px dotted black;
+    }
+    .nom{
+        right: 34.5%;
+        padding: 1.5vh 3vh;  
+    }     
+    .edadb{
+        right: 33%;
+        padding: 1.5vh 3vh;
+    }
+    .estud{
+        right: 23%;
+        padding: 1.5vh 3vh;
+    }
+    .trabaj{
+        right: 28%;
+        padding: 1.5vh 3vh;
+    }
+    
+    .contenido2 .descripcion2{
+        right: 0;
+        top: 16%;
+        width: 45%;
+        font-size: 1em;
+        padding: 1vh 3vh;
+    }
+   
+    .contenido2 .descripcion2 .ciclo{
+        margin-top: 2vh;
+        border: 5px solid  rgb(35, 36, 37);
+        font-size: 1.2em;
+        padding-inline-start: 1.3vh;
+       
+    }
+    .contenido2 .img2{
+        left: 70%;
+        bottom: -14%;
+        width: 25vh;
+        z-index: -1;
+    }
+    .contenido2 .img2 img{
+        width: 28vh;
+        height: auto;
+    
+    }
+
+
+    /*CV*/
+    .columna1 .imgcv img{
+        width: 75%;
+    }
+    .columna1 .miperfil{
+        font-size: 0.8em;
+    }
+    .columna1 .contacto li{
+        padding: 0.5vh 1vh 0vh 8vh;
+        font-size: 0.8em;
+    }
+    
+    .columna1 p{
+        font-size: 0.9em;
+    }
+    .columna2 .skills{
+        font-size: 0.7em;
+    }
+    .columna2 p{
+        font-size: 0.9em;
+    }
+    .columna2 .skills .soft{
+        padding: 1vh 1vh;
+        border-right: 1.5px solid black;
+    }
+    .columna2 .skills #uno{
+        position: relative;
+        left: -15%;
+    }
+    .columna2 .formacion{
+        font-size: 0.8em;
+    }
+    .columna3 #enf{
+        padding-left: 1vh;
+        font-size: 0.8em;
+    }
+    .columna3 p{
+        font-size: 0.9em;
+    }
+    .columna3 span{
+        font-size: 0.8em;
+    }
+    .columna3 ul{
+        font-size: 0.8em;
+    }
+    .columna3 .igual{
+        padding: 2vh;
+    }
+    .columna3 .valle{
+        padding: 0vh 2vh 2vh 2vh;
+    }
+    .columna3 ul{
+        padding-top: 1vh;
+        padding-left: 3vh;
+        list-style-type: square;
+    }
+    .columna3 .idiomas{
+        padding-left: 10vh;
+        padding-top: 1.1vh;
+        font-size: 1em;
+    
+    }
+     /*Proyectos*/
+
+     #proyectos h2{
+        border-bottom: 2px solid black;
+        font-size: 1.8em;
+        top: 20%;
+        left: 45%;
+    }
+    
+    .container{
+        bottom: -2vh;
+    }
+    
+    .container div{
+        width: 30%;
+        height: 33vh;
+    }
+    
+    .container div img{
+        width: 88%;
+        height: 25vh;
+    }
+    
+    .container div img~span{
+        width: 80%;
+    }
+
+    /*Contacto*/
+    .formulario{
+        top: 10%;
+        font-size: 0.8em;
+    }
+
+    legend{
+        font-size: 1.4em;
+    }
+    .boton [type="submit"],
+    .boton [type="reset"]{
+        width: 10%;
+        height: 5vh;
+        margin-right: 15px;
+        font-size: 1.1em;
+}  
+
+}
