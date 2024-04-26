@@ -23,7 +23,7 @@ section{
     width: 100%;
     height: 100vh;
     display: flex; /*Es una propiedad de flebox y permite que los elementos de este contenedor sean mucho más flexibles y manejables.
-    las propiedades justify-content y align-items se utilizan junto con display flex y son cruciales para controlar la alineación y 
+    las propiedades justify-content y align-items se utilizan junto con display flex y se usan para controlar la alineación y 
     distribución del espacio entre y alrededor de los elementos hijos del contenedor flex.*/
     justify-content: center;
     align-items: center;
@@ -699,10 +699,9 @@ textarea{
 
 
 
-
-
-
 /*Responsive:*/
+
+/*Comentar que para que quedara una transición algo más fluída, el rango de 576px a 992px lo he hecho en dos partes.*/
 
 @media screen and (max-width:576px){
     /*Cabecera*/
@@ -1229,7 +1228,7 @@ textarea{
         width: 50vh;
     }
     .contenido .img1 img{
-        width: 47vh;
+        width: 45vh;
         height: auto;
     }
     .redessociales{
